@@ -11,18 +11,52 @@
     <form>
         <div>
             <label for="fname">First name:</label>
-            <input type="text" id="fname" required>
+            <input type="text" name="fname" id="fname" required placeholder="John">
             <label for="lname">Last name:</label>
-            <input type="text"id="lname" required>
+            <input type="text" name="lname" id="lname" required placeholder="Smith">
         </div>
         <div>
             <label for="male">Male</label> 
+            <input type="radio" name="gender" id="male"value="male">
             <label for="female">Female</label> 
+            <input type="radio" name="gender" id="female" value="female">
             <label for="other">Other</label>
-            <input type="radio" name="gender" id="male">
-            <input type="radio" name="gender" id="female">
-            <input type="radio" name="gender" id="other">
+            <input type="radio" name="gender" id="other" value="other">
         </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required placeholder="Your email">
+            <label for="password">Password:</label>  
+            <input type="password" name="password" id="password" placeholder="Your password" pattern=".{5,10}" required title="Password must be between 5 and 10 characters">
+        </div>
+        <div>
+            <label for="month">Birthday:</label>
+            <select name="month" id="month">
+                <option value="Month">Month</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+            </select>
+            <select name="day" id="day">
+                <option value="Day">Day</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+            </select>
+            <select name="year" id="year">
+                <option value="Year">Year</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+            </select>
+        </div>
+        <div>
+            <label for="toc">I accept the terms and conditions</label>
+            <input type="checkbox" name="toc" id="toc" required>
+        </div>        
         <div>
             <input type="submit" value="Submit">
         </div>
